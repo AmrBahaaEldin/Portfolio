@@ -122,7 +122,7 @@ class HomeScreen extends StatelessWidget {
                             GestureDetector(
                               onTap: () {
                                 BlocProvider.of<HomeCubit>(context)
-                                    .openLink(uriType: "instagram");
+                                    .openLink(uriType: "github");
                               },
                               child: EasyImageSvg(
                                 image: Images.instagram,
@@ -130,26 +130,15 @@ class HomeScreen extends StatelessWidget {
                                 width: 34.w,
                               ),
                             ),
-                            GestureDetector(
-                              onTap: () {
-                                BlocProvider.of<HomeCubit>(context)
-                                    .openLink(uriType: "linkedin");
-                              },
-                              child: EasyImageSvg(
-                                image: Images.linkedin,
-                                height: 34.h,
-                                width: 34.w,
-                              ),
+                            EasyImageSvg(
+                              image: Images.linkedin,
+                              height: 34.h,
+                              width: 34.w,
                             ),
-                            GestureDetector(  onTap: () {
-                              BlocProvider.of<HomeCubit>(context)
-                                  .openLink(uriType: "github");
-                            },
-                              child: EasyImageSvg(
-                                image: Images.github,
-                                height: 34.h,
-                                width: 34.w,
-                              ),
+                            EasyImageSvg(
+                              image: Images.github,
+                              height: 34.h,
+                              width: 34.w,
                             ),
                           ],
                         ),

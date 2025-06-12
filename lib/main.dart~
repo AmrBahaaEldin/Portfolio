@@ -6,7 +6,7 @@ import 'package:portfolio/core/constants/bloc/bloc_observer.dart';
 import 'package:portfolio/core/constants/theme/my_theme.dart';
 import 'package:portfolio/features/home/logic/home_cubit.dart';
 import 'package:portfolio/features/home/presentation/home_screen.dart';
-
+import 'package:responsive_framework/responsive_framework.dart';
 
 void main() {
   Bloc.observer = MyBlocObserver();

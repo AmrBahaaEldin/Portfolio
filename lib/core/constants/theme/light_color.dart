@@ -3,9 +3,15 @@ import 'dart:ui';
 class LightColor {
   LightColor._();
 
+  static const Color textAppBar = Color(0xFF9D8640);
+  static const Color lineDivider = Color(0x1A000000);
+
+
   static const Color broderColor = Color(0xffB7A261);
   static const Color backgroundBoxColor = Color(0xffE0CE93);
-  static const Color backgroundColor = Color(0xFFF9F6EA);
+  static const Color backgroundHomeColor = Color(0xFFFFFFFF);
+  static const Color backgroundHomeSecondColor = Color(0xFFF9F6EA);
+  static const Color backgroundScaffoldColor = Color(0xffFEF6DD);
 
   static const Color textBoxColor = Color(0xff403D22);
   static const Color primaryTextColor = Color(0xFF000000);
