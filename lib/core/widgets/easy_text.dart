@@ -8,20 +8,28 @@ class EasyText extends StatelessWidget {
     required this.text,
     required this.fontFamily,
      this.color,
+    this.maxLines,
     required this.fontSize,
     required this.fontWeight,
+    this.overflow,
   });
 
   final String text;
   final String fontFamily;
   final Color ?color;
   final double fontSize;
+  final int? maxLines;
+  final TextOverflow ?overflow;
 
   final FontWeight fontWeight;
 
   @override
   Widget build(BuildContext context) {
     return Text(text,
+        maxLines: maxLines,
+        overflow:overflow,
+
+
         style: GoogleFonts.getFont(
           fontFamily,
           color: color,

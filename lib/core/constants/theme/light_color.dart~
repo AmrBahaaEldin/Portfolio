@@ -5,7 +5,7 @@ class LightColor {
 
   static const Color textAppBar = Color(0xFF9D8640);
   static const Color lineDivider = Color(0x1A000000);
-  static const Color lineLink = Color(0xFF96D0F1);
+  static const Color lineLink = Color(0x1A000000);
 
 
   static const Color broderColor = Color(0xffB7A261);

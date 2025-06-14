@@ -1,0 +1,17 @@
+class Images {
+  Images._();
+
+  static const String lightClickIcon = 'assets/image/tik_click/light_click.svg';
+  static const String darkClickIcon = 'assets/image/tik_click/dark_click.svg';
+  static const String myProfile = 'assets/image/my_profile.jpg';
+  static const String instagram = 'assets/image/tik_click/instagram.svg';
+  static const String github = 'assets/image/tik_click/github.svg';
+  static const String linkedin = 'assets/image/tik_click/linkedin.svg';
+  static const String doFlutter = 'assets/image/i_do/flutter.png';
+  static const String doWeb = 'assets/image/i_do/web.png';
+  static const String figma = 'assets/image/skills/figma.png';
+  static const String fireBase = 'assets/image/skills/firebase.png';
+  static const String flutter = 'assets/image/skills/flutter.png';
+  static const String gitHub = 'assets/image/skills/github.png';
+  static const String testProject = 'assets/image/project/img.png';
+}

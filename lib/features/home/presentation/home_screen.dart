@@ -1,14 +1,22 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:portfolio/core/constants/fonts/fonts.dart';
-import 'package:portfolio/core/constants/images/images_svg.dart';
+import 'package:portfolio/core/constants/images/images.dart';
 import 'package:portfolio/core/constants/theme/light_color.dart';
 import 'package:portfolio/core/widgets/easy_image.dart';
 import 'package:portfolio/core/widgets/easy_text.dart';
+import 'package:portfolio/features/contact/presentation/contact_screen.dart';
+import 'package:portfolio/features/experience/presentation/experience_screen.dart';
 import 'package:portfolio/features/home/logic/home_cubit.dart';
-import 'package:portfolio/features/home/presentation/profile.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:portfolio/features/home/presentation/home_screen.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portfolio/features/home/presentation/widget/about_widget.dart';
+import 'package:portfolio/features/home/presentation/widget/profile_widget.dart';
+import 'package:portfolio/features/home/presentation/widget/toggle_widget.dart';
+import 'package:portfolio/features/projects/presentation/projects.dart';
+import 'package:portfolio/features/skills/presentation/skills_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -41,21 +49,22 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      body: Padding(
-        padding: EdgeInsets.only(left: 109.w, top: 70.h),
-        child: Row(
-          children: [
-            ProfileWidget(),
-            EasyText(
-                text: "About you",
-                fontFamily: Fonts.sigmar,
-                fontSize: 32,
-                fontWeight: FontWeight.w400)
-          ],
-        ),
+      body: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          ProfileWidget(),
+          //AboutWidget(),
+         // ContactScreen(),
+         // SkillsScreen(),
+        //  Projects(),
+          ExperienceScreen(),
+          ToggleWidgets(),
+        ],
       ),
     );
   }
 }
+
+
 
 

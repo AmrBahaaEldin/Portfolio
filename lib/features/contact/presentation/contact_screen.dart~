@@ -1,0 +1,114 @@
+
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:portfolio/core/constants/fonts/fonts.dart';
+import 'package:portfolio/core/constants/images/images.dart';
+import 'package:portfolio/core/constants/theme/light_color.dart';
+import 'package:portfolio/core/widgets/easy_text.dart';
+import 'package:portfolio/core/widgets/easy_text_from_field.dart';
+import 'package:portfolio/features/contact/presentation/contact_screen.dart';
+
+class ContactScreen extends StatelessWidget {
+  const ContactScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        padding: EdgeInsets.only(
+          top: 28.h,
+          left: 37.w,
+          right: 31.w,
+        ),
+        margin: EdgeInsets.only(
+          top: 40.h,
+          left: 52.w,
+          right: 52.w,
+        ),
+        decoration: BoxDecoration(
+          color: LightColor.backgroundHomeColor,
+          border: Border.all(
+            width: 3.w,
+            color: LightColor.broderColor,
+          ),
+          borderRadius: BorderRadius.all(Radius.circular(14.r)),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+      
+          children: [
+            EasyText(
+                text: "Contact Me",
+                fontFamily: Fonts.poppins,
+                fontSize: 28,
+                fontWeight: FontWeight.w700),
+            SizedBox(
+              height: 44.h,
+            ),
+            EasyTextFromField(
+              keyboardType: TextInputType.emailAddress,
+              fontFamily: Fonts.poppins,
+              fontWeight: FontWeight.w500,
+              text: "Email Address",
+              fontSize: 20,
+              radius: 7,
+              borderSide: 2,
+              color: LightColor.broderColor,
+            ),
+            SizedBox(
+              height: 65.h,
+            ),
+            EasyTextFromField(
+              fontFamily: Fonts.poppins,
+              fontWeight: FontWeight.w500,
+              text: "Subject",
+              fontSize: 20,
+              radius: 7,
+              borderSide: 2,
+              color: LightColor.broderColor,
+            ),
+            SizedBox(
+              height: 65.h,
+            ),
+            EasyTextFromField(
+              keyboardType: TextInputType.multiline,
+              minLines: 10,
+              fontFamily: Fonts.poppins,
+              fontWeight: FontWeight.w500,
+              text: "Message",
+              fontSize: 20,
+              radius: 7,
+              borderSide: 2,
+              color: LightColor.broderColor,
+            ),
+            SizedBox(
+              height: 30.h,
+            ),
+            Align(
+              alignment: Alignment.bottomRight,
+              child: TextButton(
+                  style: ButtonStyle(
+                    fixedSize: WidgetStatePropertyAll(Size(200.w, 49.h)),
+                    backgroundColor:
+                        WidgetStatePropertyAll(LightColor.backGroundSliderSelect),
+                    shape: WidgetStatePropertyAll(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(8.r),
+                      ),
+                    )),
+                  ),
+                  onPressed: () {},
+                  child: EasyText(
+                      color: LightColor.backgroundHomeColor,
+                      text: "Submit",
+                      fontFamily: Fonts.merri,
+                      fontSize: 21,
+                      fontWeight: FontWeight.w700)),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+

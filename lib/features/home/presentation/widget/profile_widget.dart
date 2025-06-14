@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:portfolio/core/constants/fonts/fonts.dart';
-import 'package:portfolio/core/constants/images/images_svg.dart';
+import 'package:portfolio/core/constants/images/images.dart';
 import 'package:portfolio/core/constants/theme/light_color.dart';
 import 'package:portfolio/core/widgets/easy_image.dart';
 import 'package:portfolio/core/widgets/easy_text.dart';
@@ -16,8 +16,9 @@ class ProfileWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(top: 56.h, left: 109.w),
       width: 369.w,
-      height: 900.h,
+      // height: 900.h,
       decoration: BoxDecoration(
         color: LightColor.backgroundHomeColor,
         border: Border.all(
@@ -40,10 +41,13 @@ class ProfileWidget extends StatelessWidget {
                     border: Border.all(
                         width: 5.w, color: LightColor.broderColor),
                     borderRadius: BorderRadius.circular(14.r)),
-                child: Image(
-                  fit: BoxFit.fill,
-                  image: AssetImage(
-                    Images.myProfile,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(12.r),
+                  child: Image(
+                    fit: BoxFit.fill,
+                    image: AssetImage(
+                      Images.myProfile,
+                    ),
                   ),
                 ),
               ),
@@ -52,6 +56,7 @@ class ProfileWidget extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 43.w),
             child: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 SizedBox(
                   height: 147.h,
@@ -88,6 +93,7 @@ class ProfileWidget extends StatelessWidget {
                   height: 34.h,
                 ),
                 Row(
+
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     GestureDetector(
@@ -134,6 +140,7 @@ class ProfileWidget extends StatelessWidget {
                     BorderRadius.all(Radius.circular(12.r)),
                   ),
                   child: Column(
+                    mainAxisSize: MainAxisSize.min,
                     children: [
                       ListTile(
                         contentPadding: EdgeInsets.zero,
@@ -253,7 +260,7 @@ class ProfileWidget extends StatelessWidget {
                     ],
                   ),
                 ),
-                Spacer(),
+             SizedBox(height: 30.h,),
                 TextButton(
                     style: ButtonStyle(
                       shape: WidgetStatePropertyAll(
