@@ -82,7 +82,7 @@ class ExperienceScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(9.r),
                 border: Border.all(width: 3.w, color: LightColor.broderColor),
               ),
-              padding: EdgeInsets.only(left: 26.w,top: 18.h,bottom: 18.h),
+              padding: EdgeInsets.only(left: 26.w),
               child: Row(
                 children: [
                   Container(
