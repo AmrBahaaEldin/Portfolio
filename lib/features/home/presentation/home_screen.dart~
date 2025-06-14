@@ -53,11 +53,11 @@ class HomeScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ProfileWidget(),
-           AboutWidget(),
+          //AboutWidget(),
          // ContactScreen(),
          // SkillsScreen(),
         //  Projects(),
-        //  ExperienceScreen(),
+          ExperienceScreen(),
           ToggleWidgets(),
         ],
       ),
