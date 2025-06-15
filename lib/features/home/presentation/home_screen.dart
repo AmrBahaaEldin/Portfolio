@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             EasyText(
               fontFamily: Fonts.sigmar,
@@ -53,10 +53,10 @@ class HomeScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ProfileWidget(),
-           AboutWidget(),
-         // ContactScreen(),
+          // AboutWidget(),
+          ContactScreen(),
          // SkillsScreen(),
-        //  Projects(),
+         // Projects(),
         //  ExperienceScreen(),
           ToggleWidgets(),
         ],

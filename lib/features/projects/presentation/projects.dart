@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:portfolio/core/constants/fonts/fonts.dart';
 import 'package:portfolio/core/constants/images/images.dart';
 import 'package:portfolio/core/constants/theme/light_color.dart';
 import 'package:portfolio/core/widgets/easy_text.dart';
+import 'package:portfolio/features/home/logic/home_cubit.dart';
 
 class Projects extends StatelessWidget {
   const Projects({super.key});
@@ -42,6 +44,7 @@ class Projects extends StatelessWidget {
             SizedBox(height: 28.h),
             Row(
               children: [
+                ///
                 Container(
                   padding:
                       EdgeInsets.symmetric(horizontal: 21.w, vertical: 18.h),
@@ -59,141 +62,7 @@ class Projects extends StatelessWidget {
                       children: [
                         Image(
                           image: AssetImage(
-                            Images.testProject,
-                          ),
-                          fit: BoxFit.cover,
-                        ),
-                        EasyText(
-                            text: "CTA Bus Service",
-                            fontFamily: Fonts.poppins,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700)
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox(width: 53.w),
-                Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 21.w, vertical: 18.h),
-                  width: 351.w,
-                  decoration: BoxDecoration(
-                      color: LightColor.backgroundHomeSecondColor,
-                      border:
-                          Border.all(width: 1.w, color: LightColor.broderColor),
-                      borderRadius: BorderRadius.circular(14.r)),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(9.r),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Image(
-                          image: AssetImage(
-                            Images.testProject,
-                          ),
-                          fit: BoxFit.cover,
-                        ),
-                        EasyText(
-                            maxLines: 1,
-                            text: "Furniture Website ( React + PHP ) ",
-                            fontFamily: Fonts.poppins,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700)
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 24.h),
-            Row(
-              children: [
-                Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 21.w, vertical: 18.h),
-                  width: 351.w,
-                  decoration: BoxDecoration(
-                      color: LightColor.backgroundHomeSecondColor,
-                      border:
-                          Border.all(width: 1.w, color: LightColor.broderColor),
-                      borderRadius: BorderRadius.circular(14.r)),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(9.r),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Image(
-                          image: AssetImage(
-                            Images.testProject,
-                          ),
-                          fit: BoxFit.cover,
-                        ),
-                        EasyText(
-                            text: "CTA Bus Service",
-                            fontFamily: Fonts.poppins,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700)
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox(width: 53.w),
-                Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 21.w, vertical: 18.h),
-                  width: 351.w,
-                  decoration: BoxDecoration(
-                      color: LightColor.backgroundHomeSecondColor,
-                      border:
-                          Border.all(width: 1.w, color: LightColor.broderColor),
-                      borderRadius: BorderRadius.circular(14.r)),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(9.r),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Image(
-                          image: AssetImage(
-                            Images.testProject,
-                          ),
-                          fit: BoxFit.cover,
-                        ),
-                        EasyText(
-                            maxLines: 1,
-                            text: "Furniture Website ( React + PHP ) ",
-                            fontFamily: Fonts.poppins,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700)
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 24.h),
-            Row(
-              children: [
-                Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 21.w, vertical: 18.h),
-                  width: 351.w,
-                  decoration: BoxDecoration(
-                      color: LightColor.backgroundHomeSecondColor,
-                      border:
-                          Border.all(width: 1.w, color: LightColor.broderColor),
-                      borderRadius: BorderRadius.circular(14.r)),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(9.r),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Image(
-                          image: AssetImage(
-                            Images.testProject,
+                            Images.ctaProject,
                           ),
                           fit: BoxFit.cover,
                         ),
@@ -204,11 +73,15 @@ class Projects extends StatelessWidget {
                             fontWeight: FontWeight.w700),
                         //only link projects
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            BlocProvider.of<HomeCubit>(context).openLink(uriType: 'youtube_cta');
+                          },
                           child: EasyText(
-                              text: "Link Youtube",
+                            decoration: TextDecoration.underline,
+                              text: "Visit Youtube",
                               fontFamily: Fonts.merri,
                               fontSize: 12,
+                              decorationColor: LightColor.lineLink,
                               color: LightColor.lineLink,
                               fontWeight: FontWeight.w400),
                         ),
@@ -217,37 +90,7 @@ class Projects extends StatelessWidget {
                   ),
                 ),
                 SizedBox(width: 53.w),
-                Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 21.w, vertical: 18.h),
-                  width: 351.w,
-                  decoration: BoxDecoration(
-                      color: LightColor.backgroundHomeSecondColor,
-                      border:
-                          Border.all(width: 1.w, color: LightColor.broderColor),
-                      borderRadius: BorderRadius.circular(14.r)),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(9.r),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Image(
-                          image: AssetImage(
-                            Images.testProject,
-                          ),
-                          fit: BoxFit.cover,
-                        ),
-                        EasyText(
-                            maxLines: 1,
-                            text: "Furniture Website ( React + PHP ) ",
-                            fontFamily: Fonts.poppins,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700)
-                      ],
-                    ),
-                  ),
-                ),
+
               ],
             ),
 

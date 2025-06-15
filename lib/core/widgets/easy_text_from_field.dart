@@ -14,10 +14,13 @@ class EasyTextFromField extends StatelessWidget {
   final Color color;
   final TextInputType? keyboardType;
   final int? minLines;
+ final void Function(String)? onChanged;
 
   final int? maxLines;
+  final TextEditingController? controller;
 
   const EasyTextFromField({
+
     super.key,
     required this.text,
     required this.fontFamily,
@@ -29,13 +32,18 @@ class EasyTextFromField extends StatelessWidget {
     this.keyboardType,
     this.minLines,
     this.maxLines,
+    this.onChanged,
+    this.controller,
+
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller ,
       minLines: minLines,
       maxLines: maxLines,
+      onChanged: onChanged,
       keyboardType: keyboardType ?? TextInputType.name,
       decoration: InputDecoration(
         label: EasyText(
@@ -51,6 +59,7 @@ class EasyTextFromField extends StatelessWidget {
           borderRadius: BorderRadius.circular(radius.r),
           borderSide: BorderSide(width: borderSide.w, color: color),
         ),
+
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(radius.r),
           borderSide: BorderSide(width: borderSide.w, color: color),

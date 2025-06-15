@@ -13,7 +13,6 @@ class EasyText extends StatelessWidget {
     required this.fontWeight,
     this.overflow,
     this.decoration,
-    this.decorationColor,
   });
 
   final String text;
@@ -24,7 +23,6 @@ class EasyText extends StatelessWidget {
   final TextOverflow ?overflow;
   final FontWeight fontWeight;
   final TextDecoration ?decoration;
-  final Color? decorationColor;
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +35,7 @@ class EasyText extends StatelessWidget {
           fontFamily,
           color: color,
           decoration: decoration,
-          decorationColor: decorationColor,
+          decorationColor: Colors.blue,
           fontSize: fontSize.sp,
           fontWeight: fontWeight,
         ));

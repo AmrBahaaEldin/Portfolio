@@ -15,4 +15,5 @@ class Images {
   static const String gitHub = 'assets/image/skills/github.png';
   static const String testProject = 'assets/image/project/img.png';
   static const String orangeExp = 'assets/image/experience/orange.jpeg';
+  static const String eAndExp = 'assets/image/experience/E and.jpeg';
 }

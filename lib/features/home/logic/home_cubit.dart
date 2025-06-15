@@ -28,25 +28,40 @@ class HomeCubit extends Cubit<HomeState> {
             github,
             mode: LaunchMode.externalApplication);
         emit(HomeOpenLink());
-      } else if (uriType == 'linkedin') {
+      }
+      else if (uriType == 'linkedin') {
         await launchUrl(
             webOnlyWindowName: '_blank',
             linkedin,
             mode: LaunchMode.externalApplication);
         emit(HomeOpenLink());
-      } else if (uriType == 'instagram') {
+      }
+      else if (uriType == 'instagram') {
         await launchUrl(
             webOnlyWindowName: '_blank',
             instagram,
             mode: LaunchMode.externalApplication);
         emit(HomeOpenLink());
-      } else if (uriType == 'cv') {
+      }
+      else if (uriType == 'cv') {
         await launchUrl(
             webOnlyWindowName: '_blank',
             pdf,
             mode: LaunchMode.externalApplication);
         emit(HomeOpenLink());
       }
+      else if(uriType == 'youtube_cta') {
+        await launchUrl(
+            webOnlyWindowName: '_blank',
+            Uri.parse(Links.youtubeCta),
+            mode: LaunchMode.externalApplication);
+        emit(HomeOpenLink());
+      }
+      else {
+        throw ('Invalid link type');
+
+      }
+
     } catch (e) {
       throw ('Error opening link: $e');
     }

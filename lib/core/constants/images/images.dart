@@ -16,4 +16,5 @@ class Images {
   static const String testProject = 'assets/image/project/img.png';
   static const String orangeExp = 'assets/image/experience/orange.jpeg';
   static const String eAndExp = 'assets/image/experience/E and.jpeg';
+  static const String ctaProject = 'assets/image/project/cta.png';
 }
