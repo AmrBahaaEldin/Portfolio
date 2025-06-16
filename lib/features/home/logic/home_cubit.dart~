@@ -70,7 +70,7 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
 //////////////////////////////////////////////////////
-//default color for toggle items
+
   Color colorAbout = LightColor.backGroundSliderSelect;
   Color colorExperience = LightColor.backGroundSliderUnSelect;
   Color colorProjects = LightColor.backGroundSliderUnSelect;

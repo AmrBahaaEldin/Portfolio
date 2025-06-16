@@ -192,7 +192,7 @@ class ProfileWidget extends StatelessWidget {
                           ),
                         ),
                         title: EasyText(
-                            text: "amrdeveloper777@gmail.com",
+                            text: "amr.bahaaeldin@outlook.com",
                             fontFamily: Fonts.inter,
                             fontSize: 15,
                             fontWeight: FontWeight.w500),

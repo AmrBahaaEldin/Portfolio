@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget currentWidget;
-    switch (context.watch<HomeCubit>().currentScreen) {
+    switch (cubit.currentScreen) {
       case 'about':
         currentWidget = AboutWidget();
         break;
@@ -73,9 +73,21 @@ class HomeScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ProfileWidget(),
-          currentWidget,
 
-
+    switch (context.watch<HomeCubit>().currentScreen) {
+    case 'about':
+     AboutWidget(),
+    case 'experience':
+     ExperienceScreen(),
+    case 'projects':
+     Projects();
+    case 'skills':
+     SkillsScreen(),
+    case 'contact':
+    return ContactScreen()
+    default:
+    return AboutWidget(),
+    },
           ToggleWidgets(),
 
 

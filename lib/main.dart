@@ -18,28 +18,26 @@ class PortfolioApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      minTextAdapt: true,
-      splitScreenMode: false,
-      designSize: const Size(1728, 1135),
-      builder: (context, child) => BlocProvider(
-        create: (context) => HomeCubit(),
-        child: BlocConsumer<HomeCubit, HomeState>(
-          listener: (context, state) {},
-          builder: (context, state) {
-            return MaterialApp(
-
-              debugShowCheckedModeBanner: false,
-              themeMode: context.read<HomeCubit>().isDarkMode
-                  ? ThemeMode.dark
-                  : ThemeMode.light,
-              theme: MyThemes.lightTheme(),
-              darkTheme: MyThemes.darkTheme(),
-              home: const HomeScreen(),
-            );
-          },
-        ),
+    return BlocProvider(
+      create: (context) => HomeCubit(),
+      child: ScreenUtilInit(
+        designSize: Size(1728, 1135),
+        builder: (context, child) {
+          return BlocConsumer<HomeCubit, HomeState>(
+            listener: (context, state) {},
+            builder: (context, state) {
+              return MaterialApp(
+                debugShowCheckedModeBanner: false,
+                themeMode: context.watch<HomeCubit>().isDarkMode ? ThemeMode.dark : ThemeMode.light,
+                theme: MyThemes.lightTheme(),
+                darkTheme: MyThemes.darkTheme(),
+                home: const HomeScreen(),
+              );
+            },
+          );
+        },
       ),
     );
+
   }
 }

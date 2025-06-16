@@ -16,7 +16,7 @@ class ProfileWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 56.h,),
+      margin: EdgeInsets.only(top: 56.h, left: 109.w),
       width: 369.w,
       // height: 900.h,
       decoration: BoxDecoration(
