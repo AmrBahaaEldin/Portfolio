@@ -57,6 +57,12 @@ class HomeCubit extends Cubit<HomeState> {
             Uri.parse(Links.youtubeCta),
             mode: LaunchMode.externalApplication);
         emit(HomeOpenLink());
+      } else if (uriType == 'youtube_Zalada') {
+        await launchUrl(
+            webOnlyWindowName: '_blank',
+            Uri.parse(Links.youtubeECommerce),
+            mode: LaunchMode.externalApplication);
+        emit(HomeOpenLink());
       } else {
         throw ('Invalid link type');
       }

@@ -99,8 +99,8 @@ class ProfileWidget extends StatelessWidget {
                         BlocProvider.of<HomeCubit>(context)
                             .openLink(uriType: "tiktok");
                       },
-                      child: EasyImageSvg(
-                        image: Images.instagram,
+                      child: Image.asset(
+                         Images.tikTokClick,
                         height: 34.h,
                         width: 34.w,
                       ),
@@ -111,7 +111,7 @@ class ProfileWidget extends StatelessWidget {
                             .openLink(uriType: "linkedin");
                       },
                       child: EasyImageSvg(
-                        image: Images.tikTokClick,
+                        image: Images.linkedin,
                         height: 34.h,
                         width: 34.w,
                       ),
@@ -187,11 +187,15 @@ class ProfileWidget extends StatelessWidget {
                             Icons.email,
                           ),
                         ),
-                        title: EasyText(
-                            text: "amr.bahaaeldin@outlook.com",
-                            fontFamily: Fonts.inter,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w500),
+                        title: SizedBox(
+                          width: 100.w,
+                          child: EasyText(
+                            maxLines: 2,
+                              text: "amr.bahaaeldin@outlook.com",
+                              fontFamily: Fonts.inter,
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
                       Divider(
                         color: LightColor.lineDivider,
@@ -246,7 +250,7 @@ class ProfileWidget extends StatelessWidget {
                           ),
                         ),
                         title: EasyText(
-                            text: "12,Aug.2001",
+                            text: "12,Aug,2001",
                             fontFamily: Fonts.inter,
                             fontSize: 15,
                             fontWeight: FontWeight.w500),

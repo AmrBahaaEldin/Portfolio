@@ -18,4 +18,5 @@ class Images {
   static const String eAndExp = 'assets/image/experience/E and.jpeg';
   static const String ctaProject = 'assets/image/project/cta.png';
   static const String tikTokClick = 'assets/image/tik_click/social-media.png';
+  static const String logoProjectEcommerce = 'assets/image/skills/online-shopping.png';
 }

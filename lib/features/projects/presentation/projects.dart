@@ -46,9 +46,11 @@ class Projects extends StatelessWidget {
               children: [
                 ///
                 Container(
+                  width: 351.w,
+                  height: 250.h,
                   padding:
                       EdgeInsets.symmetric(horizontal: 21.w, vertical: 18.h),
-                  width: 351.w,
+
                   decoration: BoxDecoration(
                       color: LightColor.backgroundHomeSecondColor,
                       border:
@@ -56,36 +58,47 @@ class Projects extends StatelessWidget {
                       borderRadius: BorderRadius.circular(14.r)),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(9.r),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Image(
-                          image: AssetImage(
-                            Images.ctaProject,
+                    child: Center(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          SizedBox(
+                            height: 100.h,
+                            child: Image(
+
+                              image:
+                              AssetImage(
+                                Images.ctaProject,
+                              ),
+
+                              fit: BoxFit.cover,
+                            ),
                           ),
-                          fit: BoxFit.cover,
-                        ),
-                        EasyText(
-                            text: "CTA Bus Service",
-                            fontFamily: Fonts.poppins,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700),
-                        //only link projects
-                        GestureDetector(
-                          onTap: () {
-                            BlocProvider.of<HomeCubit>(context).openLink(uriType: 'youtube_cta');
-                          },
-                          child: EasyText(
-                            decoration: TextDecoration.underline,
-                              text: "Visit Youtube",
-                              fontFamily: Fonts.merri,
-                              fontSize: 12,
-                              decorationColor: LightColor.lineLink,
-                              color: LightColor.lineLink,
-                              fontWeight: FontWeight.w400),
-                        ),
-                      ],
+                          EasyText(
+                              text: "CTA Bus Service",
+                              fontFamily: Fonts.poppins,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700),
+                          //only link projects
+                          SizedBox(
+                            height: 10.h,
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              BlocProvider.of<HomeCubit>(context).openLink(uriType: 'youtube_cta');
+                            },
+                            child: EasyText(
+                              decoration: TextDecoration.underline,
+                                text: "Visit Youtube",
+                                fontFamily: Fonts.merri,
+                                fontSize: 12,
+                                decorationColor: LightColor.lineLink,
+                                color: LightColor.lineLink,
+                                fontWeight: FontWeight.w400),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -94,6 +107,7 @@ class Projects extends StatelessWidget {
                   padding:
                       EdgeInsets.symmetric(horizontal: 21.w, vertical: 18.h),
                   width: 351.w,
+                  height: 250.h,
                   decoration: BoxDecoration(
                       color: LightColor.backgroundHomeSecondColor,
                       border:
@@ -101,36 +115,45 @@ class Projects extends StatelessWidget {
                       borderRadius: BorderRadius.circular(14.r)),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(9.r),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Image(
-                          image: AssetImage(
-                            Images.ctaProject,
+                    child: Center(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          SizedBox(
+                            height: 100.h,
+                            child: Image(
+                              image: AssetImage(
+                                Images.logoProjectEcommerce,
+                              ),
+                              fit: BoxFit.cover,
+                            ),
                           ),
-                          fit: BoxFit.cover,
-                        ),
-                        EasyText(
-                            text: "CTA Bus Service",
-                            fontFamily: Fonts.poppins,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700),
-                        //only link projects
-                        GestureDetector(
-                          onTap: () {
-                            BlocProvider.of<HomeCubit>(context).openLink(uriType: 'youtube_cta');
-                          },
-                          child: EasyText(
-                            decoration: TextDecoration.underline,
-                              text: "Visit Youtube",
-                              fontFamily: Fonts.merri,
-                              fontSize: 12,
-                              decorationColor: LightColor.lineLink,
-                              color: LightColor.lineLink,
-                              fontWeight: FontWeight.w400),
-                        ),
-                      ],
+
+                          EasyText(
+                              text: "ZaladaApp (E-commerce)",
+                              fontFamily: Fonts.poppins,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700),
+                          SizedBox(
+                            height: 10.h,
+                          ),
+                          //only link projects
+                          GestureDetector(
+                            onTap: () {
+                              BlocProvider.of<HomeCubit>(context).openLink(uriType: 'youtube_Zalada');
+                            },
+                            child: EasyText(
+                              decoration: TextDecoration.underline,
+                                text: "Visit Youtube",
+                                fontFamily: Fonts.merri,
+                                fontSize: 12,
+                                decorationColor: LightColor.lineLink,
+                                color: LightColor.lineLink,
+                                fontWeight: FontWeight.w400),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
