@@ -93,7 +93,36 @@ class SkillsScreen extends StatelessWidget {
                       ),
                     ),
                     EasyText(
-                        text: "Flutter",
+                        text: "FireBase",
+                        fontFamily: Fonts.poppins,
+                        fontSize: 19,
+                        fontWeight: FontWeight.w500)
+                  ],
+                ),
+                SizedBox(width: 26.w),
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      height: 79.h,
+                      width: 85.w,
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 19.w, vertical: 16.h),
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                              width: 1.w, color: LightColor.broderColor),
+                          borderRadius: BorderRadius.circular(14.r)),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(12.r),
+                        child: Image(
+                          image: AssetImage(
+                            Images.supaBaseLogo,
+                          ),
+                        ),
+                      ),
+                    ),
+                    EasyText(
+                        text: "supabase",
                         fontFamily: Fonts.poppins,
                         fontSize: 19,
                         fontWeight: FontWeight.w500)
