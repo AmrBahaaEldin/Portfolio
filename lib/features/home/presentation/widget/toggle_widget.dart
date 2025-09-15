@@ -2,9 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:portfolio/core/constants/fonts/fonts.dart';
 import 'package:portfolio/core/constants/theme/light_color.dart';
-import 'package:portfolio/core/widgets/easy_text.dart';
 import 'package:portfolio/features/home/logic/home_cubit.dart';
 import 'package:portfolio/features/home/presentation/widget/toggle_item.dart';
 

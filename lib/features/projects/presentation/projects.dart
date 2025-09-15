@@ -90,6 +90,50 @@ class Projects extends StatelessWidget {
                   ),
                 ),
                 SizedBox(width: 53.w),
+                   Container(
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 21.w, vertical: 18.h),
+                  width: 351.w,
+                  decoration: BoxDecoration(
+                      color: LightColor.backgroundHomeSecondColor,
+                      border:
+                          Border.all(width: 1.w, color: LightColor.broderColor),
+                      borderRadius: BorderRadius.circular(14.r)),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(9.r),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Image(
+                          image: AssetImage(
+                            Images.ctaProject,
+                          ),
+                          fit: BoxFit.cover,
+                        ),
+                        EasyText(
+                            text: "CTA Bus Service",
+                            fontFamily: Fonts.poppins,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700),
+                        //only link projects
+                        GestureDetector(
+                          onTap: () {
+                            BlocProvider.of<HomeCubit>(context).openLink(uriType: 'youtube_cta');
+                          },
+                          child: EasyText(
+                            decoration: TextDecoration.underline,
+                              text: "Visit Youtube",
+                              fontFamily: Fonts.merri,
+                              fontSize: 12,
+                              decorationColor: LightColor.lineLink,
+                              color: LightColor.lineLink,
+                              fontWeight: FontWeight.w400),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
 
               ],
             ),

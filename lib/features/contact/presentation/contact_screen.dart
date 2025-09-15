@@ -7,6 +7,7 @@ import 'package:portfolio/core/constants/theme/light_color.dart';
 import 'package:portfolio/core/widgets/easy_text.dart';
 import 'package:portfolio/core/widgets/easy_text_from_field.dart';
 import 'package:portfolio/features/contact/logic/contact_cubit.dart';
+import 'package:portfolio/features/contact/logic/contact_state.dart';
 
 class ContactScreen extends StatelessWidget {
   ContactScreen({super.key});

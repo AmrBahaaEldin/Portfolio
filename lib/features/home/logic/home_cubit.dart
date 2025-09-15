@@ -1,15 +1,11 @@
-import 'dart:ui';
+
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/widgets.dart';
-import 'package:meta/meta.dart';
+
 import 'package:portfolio/core/constants/links/links.dart';
 import 'package:portfolio/core/constants/theme/light_color.dart';
-import 'package:portfolio/features/contact/presentation/contact_screen.dart';
-import 'package:portfolio/features/experience/presentation/experience_screen.dart';
-import 'package:portfolio/features/home/presentation/widget/about_widget.dart';
-import 'package:portfolio/features/projects/presentation/projects.dart';
-import 'package:portfolio/features/skills/presentation/skills_screen.dart';
+
 import 'package:url_launcher/url_launcher.dart';
 
 part 'home_state.dart';
@@ -25,7 +21,7 @@ class HomeCubit extends Cubit<HomeState> {
 
   final Uri pdf = Uri.parse(Links.cv);
   final Uri github = Uri.parse(Links.github);
-  final Uri instagram = Uri.parse(Links.instagram);
+  final Uri tiktok = Uri.parse(Links.tikTok);
   final Uri linkedin = Uri.parse(Links.linkedin);
 
   ///////////open link in browser/////
@@ -43,10 +39,10 @@ class HomeCubit extends Cubit<HomeState> {
             linkedin,
             mode: LaunchMode.externalApplication);
         emit(HomeOpenLink());
-      } else if (uriType == 'instagram') {
+      } else if (uriType == 'tiktok') {
         await launchUrl(
             webOnlyWindowName: '_blank',
-            instagram,
+            tiktok,
             mode: LaunchMode.externalApplication);
         emit(HomeOpenLink());
       } else if (uriType == 'cv') {

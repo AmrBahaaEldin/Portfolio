@@ -1,8 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
-import 'package:meta/meta.dart';
+import 'package:portfolio/features/contact/logic/contact_state.dart';
 
-part 'contact_state.dart';
 
 class ContactCubit extends Cubit<ContactState> {
   ContactCubit() : super(ContactInitial());

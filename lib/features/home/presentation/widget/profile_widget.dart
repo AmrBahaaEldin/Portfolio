@@ -38,8 +38,8 @@ class ProfileWidget extends StatelessWidget {
                 height: 200.h,
                 width: 200.w,
                 decoration: BoxDecoration(
-                    border: Border.all(
-                        width: 5.w, color: LightColor.broderColor),
+                    border:
+                        Border.all(width: 5.w, color: LightColor.broderColor),
                     borderRadius: BorderRadius.circular(14.r)),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12.r),
@@ -78,10 +78,9 @@ class ProfileWidget extends StatelessWidget {
                   ),
                   decoration: BoxDecoration(
                     color: LightColor.backGroundSliderUnSelect,
-                    borderRadius:
-                    BorderRadius.all(Radius.circular(6.r)),
-                    border: Border.all(
-                        width: 1.w, color: LightColor.broderColor),
+                    borderRadius: BorderRadius.all(Radius.circular(6.r)),
+                    border:
+                        Border.all(width: 1.w, color: LightColor.broderColor),
                   ),
                   child: EasyText(
                       text: "Flutter Dev",
@@ -93,13 +92,12 @@ class ProfileWidget extends StatelessWidget {
                   height: 34.h,
                 ),
                 Row(
-
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     GestureDetector(
                       onTap: () {
                         BlocProvider.of<HomeCubit>(context)
-                            .openLink(uriType: "instagram");
+                            .openLink(uriType: "tiktok");
                       },
                       child: EasyImageSvg(
                         image: Images.instagram,
@@ -113,15 +111,16 @@ class ProfileWidget extends StatelessWidget {
                             .openLink(uriType: "linkedin");
                       },
                       child: EasyImageSvg(
-                        image: Images.linkedin,
+                        image: Images.tikTokClick,
                         height: 34.h,
                         width: 34.w,
                       ),
                     ),
-                    GestureDetector(  onTap: () {
-                      BlocProvider.of<HomeCubit>(context)
-                          .openLink(uriType: "github");
-                    },
+                    GestureDetector(
+                      onTap: () {
+                        BlocProvider.of<HomeCubit>(context)
+                            .openLink(uriType: "github");
+                      },
                       child: EasyImageSvg(
                         image: Images.github,
                         height: 34.h,
@@ -136,8 +135,7 @@ class ProfileWidget extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     color: LightColor.backgroundHomeSecondColor,
-                    borderRadius:
-                    BorderRadius.all(Radius.circular(12.r)),
+                    borderRadius: BorderRadius.all(Radius.circular(12.r)),
                   ),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
@@ -150,11 +148,10 @@ class ProfileWidget extends StatelessWidget {
                           width: 35.w,
                           decoration: BoxDecoration(
                               border: Border.all(
-                                  color:
-                                  LightColor.backgroundHomeColor),
+                                  color: LightColor.backgroundHomeColor),
                               color: LightColor.backGroundIcon,
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(4.r))),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(4.r))),
                           child: Icon(
                             color: LightColor.iconSliderUnSelect,
                             size: 22.sp,
@@ -180,11 +177,10 @@ class ProfileWidget extends StatelessWidget {
                           width: 35.w,
                           decoration: BoxDecoration(
                               border: Border.all(
-                                  color:
-                                  LightColor.backgroundHomeColor),
+                                  color: LightColor.backgroundHomeColor),
                               color: LightColor.backGroundIcon,
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(4.r))),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(4.r))),
                           child: Icon(
                             color: LightColor.iconSliderUnSelect,
                             size: 22.sp,
@@ -210,11 +206,10 @@ class ProfileWidget extends StatelessWidget {
                           width: 35.w,
                           decoration: BoxDecoration(
                               border: Border.all(
-                                  color:
-                                  LightColor.backgroundHomeColor),
+                                  color: LightColor.backgroundHomeColor),
                               color: LightColor.backGroundIcon,
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(4.r))),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(4.r))),
                           child: Icon(
                             color: LightColor.iconSliderUnSelect,
                             size: 22.sp,
@@ -240,11 +235,10 @@ class ProfileWidget extends StatelessWidget {
                           width: 35.w,
                           decoration: BoxDecoration(
                               border: Border.all(
-                                  color:
-                                  LightColor.backgroundHomeColor),
+                                  color: LightColor.backgroundHomeColor),
                               color: LightColor.backGroundIcon,
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(4.r))),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(4.r))),
                           child: Icon(
                             color: LightColor.iconSliderUnSelect,
                             size: 22.sp,
@@ -260,20 +254,19 @@ class ProfileWidget extends StatelessWidget {
                     ],
                   ),
                 ),
-             SizedBox(height: 30.h,),
+                SizedBox(
+                  height: 30.h,
+                ),
                 TextButton(
                     style: ButtonStyle(
-                      shape: WidgetStatePropertyAll(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(8.r),
-                              ),
-                              side: BorderSide(
-                                  width: 2.w,
-                                  color: LightColor.broderColor))),
+                      shape: WidgetStatePropertyAll(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(8.r),
+                          ),
+                          side: BorderSide(
+                              width: 2.w, color: LightColor.broderColor))),
                     ),
-                    onPressed:
-                        () {
+                    onPressed: () {
                       BlocProvider.of<HomeCubit>(context)
                           .openLink(uriType: "cv");
                     },

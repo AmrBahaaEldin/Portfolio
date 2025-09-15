@@ -4,7 +4,6 @@ import 'package:portfolio/core/constants/fonts/fonts.dart';
 import 'package:portfolio/core/constants/images/images.dart';
 import 'package:portfolio/core/constants/theme/light_color.dart';
 import 'package:portfolio/core/widgets/easy_text.dart';
-import 'package:portfolio/core/widgets/easy_text_from_field.dart';
 
 class SkillsScreen extends StatelessWidget {
   const SkillsScreen({super.key});
