@@ -128,6 +128,93 @@ class SkillsScreen extends StatelessWidget {
                         fontWeight: FontWeight.w500)
                   ],
                 ),
+                SizedBox(width: 26.w),
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      height: 79.h,
+                      width: 85.w,
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 19.w, vertical: 16.h),
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                              width: 1.w, color: LightColor.broderColor),
+                          borderRadius: BorderRadius.circular(14.r)),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(12.r),
+                        child: Image(
+                          image: AssetImage(
+                            Images.htmlskill,
+                          ),
+                        ),
+                      ),
+                    ),
+                    EasyText(
+                        text: "Html",
+                        fontFamily: Fonts.poppins,
+                        fontSize: 19,
+                        fontWeight: FontWeight.w500)
+                  ],
+                ),
+                SizedBox(width: 26.w),
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      height: 79.h,
+                      width: 85.w,
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 19.w, vertical: 16.h),
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                              width: 1.w, color: LightColor.broderColor),
+                          borderRadius: BorderRadius.circular(14.r)),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(12.r),
+                        child: Image(
+                          image: AssetImage(
+                            Images.cssskill,
+                          ),
+                        ),
+                      ),
+                    ),
+                    EasyText(
+                        text: "Css",
+                        fontFamily: Fonts.poppins,
+                        fontSize: 19,
+                        fontWeight: FontWeight.w500)
+                  ],
+                ),
+                SizedBox(width: 26.w),
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      height: 79.h,
+                      width: 85.w,
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 19.w, vertical: 16.h),
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                              width: 1.w, color: LightColor.broderColor),
+                          borderRadius: BorderRadius.circular(14.r)),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(12.r),
+                        child: Image(
+                          image: AssetImage(
+                            Images.javascriptskill,
+                          ),
+                        ),
+                      ),
+                    ),
+                    EasyText(
+                        text: "Js",
+                        fontFamily: Fonts.poppins,
+                        fontSize: 19,
+                        fontWeight: FontWeight.w500)
+                  ],
+                ),
               ],
             ),
             SizedBox(height: 27.h),

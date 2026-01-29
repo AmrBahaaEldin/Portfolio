@@ -20,4 +20,7 @@ class Images {
   static const String tikTokClick = 'assets/image/tik_click/social-media.png';
   static const String logoProjectEcommerce = 'assets/image/skills/online-shopping.png';
   static const String supaBaseLogo = 'assets/image/skills/supabase-logo-icon.png';
+  static const String htmlskill = 'assets/image/skills/html.png';
+  static const String cssskill = 'assets/image/skills/text.png';
+  static const String javascriptskill = 'assets/image/skills/java.png';
 }
